@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - CSS Master Guide</title>
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">🎨 CSS Master Guide</h1>
+            <div class="nav-scroll-container">
+                <div class="nav-buttons">
+                    <a href="../index.html" class="nav-btn">🏠 Home</a>
+                    <a href="../introduction/introduction.html" class="nav-btn">📝 Introduction</a>
+                    <a href="../selectors/selectors.html" class="nav-btn">🎯 Selectors</a>
+                    <a href="../box-model/box-model.html" class="nav-btn">📦 Box Model</a>
+                    <a href="../display-position/display-position.html" class="nav-btn">📍 Display & Position</a>
+                    <a href="../flexbox/flexbox.html" class="nav-btn active">🎪 Flexbox</a>
+                    <a href="../grid/grid.html" class="nav-btn">🔲 Grid</a>
+                    <a href="../responsive/responsive.html" class="nav-btn">📱 Responsive</a>
+                    <a href="../animations/animations.html" class="nav-btn">✨ Animations</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <header class="lesson-header">
+            <h1>CSS Grid</h1>
+            <p>Master the powerful two-dimensional layout system for modern web design</p>
+        </header>
+
+        <section class="intro-section">
+            <h2 class="section-title">What is CSS Grid?</h2>
+            <div class="intro-content">
+                <div class="intro-text">
+                    <p>CSS Grid Layout is a two-dimensional layout system for the web that lets you create complex responsive web designs with ease.</p>
+                    <div class="key-features">
+                        <div class="feature">
+                            <span class="feature-icon">📐</span>
+                            <span>Two-dimensional</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🎯</span>
+                            <span>Precise Placement</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">📱</span>
+                            <span>Responsive</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">⚡</span>
+                            <span>Powerful</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro-visual">
+                    <div class="grid-concept">
+                        <div class="grid-container-concept">
+                            <div class="grid-item-concept">1</div>
+                            <div class="grid-item-concept">2</div>
+                            <div class="grid-item-concept">3</div>
+                            <div class="grid-item-concept">4</div>
+                            <div class="grid-item-concept">5</div>
+                            <div class="grid-item-concept">6</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-section">
+            <h2 class="section-title">Container Properties</h2>
+            
+            <div class="property-examples">
+                <div class="property-demo">
+                    <h3>grid-template-columns & grid-template-rows</h3>
+                    <p>Defines the columns and rows of the grid</p>
+                    <div class="demo-container">
+                        <div class="grid-demo basic-grid">
+                            <div class="grid-demo-item">1</div>
+                            <div class="grid-demo-item">2</div>
+                            <div class="grid-demo-item">3</div>
+                            <div class="grid-demo-item">4</div>
+                            <div class="grid-demo-item">5</div>
+                            <div class="grid-demo-item">6</div>
+                        </div>
+                        <code>grid-template-columns: repeat(3, 1fr);<br>grid-template-rows: repeat(2, 100px);</code>
+                    </div>
+                </div>
+
+                <div class="property-demo">
+                    <h3>grid-template-areas</h3>
+                    <p>Defines areas in the grid using named areas</p>
+                    <div class="demo-container">
+                        <div class="grid-demo area-grid">
+                            <div class="grid-demo-item header">Header</div>
+                            <div class="grid-demo-item sidebar">Sidebar</div>
+                            <div class="grid-demo-item main">Main</div>
+                            <div class="grid-demo-item footer">Footer</div>
+                        </div>
+                        <code>grid-template-areas:<br>  "header header"<br>  "sidebar main"<br>  "footer footer";</code>
+                    </div>
+                </div>
+
+                <div class="property-demo">
+                    <h3>gap, row-gap, column-gap</h3>
+                    <p>Controls spacing between grid items</p>
+                    <div class="demo-container">
+                        <div class="grid-demo gap-grid">
+                            <div class="grid-demo-item">1</div>
+                            <div class="grid-demo-item">2</div>
+                            <div class="grid-demo-item">3</div>
+                            <div class="grid-demo-item">4</div>
+                            <div class="grid-demo-item">5</div>
+                            <div class="grid-demo-item">6</div>
+                        </div>
+                        <code>gap: 20px;<br>/* or */<br>row-gap: 15px;<br>column-gap: 25px;</code>
+                    </div>
+                </div>
+
+                <div class="property-demo">
+                    <h3>justify-items & align-items</h3>
+                    <p>Aligns items along the inline and block axes</p>
+                    <div class="demo-container">
+                        <div class="grid-demo justify-align-grid">
+                            <div class="grid-demo-item">Center</div>
+                            <div class="grid-demo-item">Center</div>
+                            <div class="grid-demo-item">Center</div>
+                        </div>
+                        <code>justify-items: center;<br>align-items: center;</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="items-section">
+            <h2 class="section-title">Item Properties</h2>
+            
+            <div class="property-examples">
+                <div class="property-demo">
+                    <h3>grid-column & grid-row</h3>
+                    <p>Places items in specific grid cells</p>
+                    <div class="demo-container">
+                        <div class="grid-demo placement-grid">
+                            <div class="grid-demo-item span-2">Span 2</div>
+                            <div class="grid-demo-item">2</div>
+                            <div class="grid-demo-item">3</div>
+                            <div class="grid-demo-item span-2-row">Span 2 Row</div>
+                            <div class="grid-demo-item">5</div>
+                            <div class="grid-demo-item">6</div>
+                        </div>
+                        <code>grid-column: 1 / 3;<br>grid-row: 2 / 4;</code>
+                    </div>
+                </div>
+
+                <div class="property-demo">
+                    <h3>grid-area</h3>
+                    <p>Places items in named grid areas</p>
+                    <div class="demo-container">
+                        <div class="grid-demo area-grid">
+                            <div class="grid-demo-item header">Header</div>
+                            <div class="grid-demo-item sidebar">Sidebar</div>
+                            <div class="grid-demo-item main">Main</div>
+                            <div class="grid-demo-item footer">Footer</div>
+                        </div>
+                        <code>grid-area: header;<br>grid-area: sidebar;<br>grid-area: main;<br>grid-area: footer;</code>
+                    </div>
+                </div>
+
+                <div class="property-demo">
+                    <h3>justify-self & align-self</h3>
+                    <p>Aligns individual items</p>
+                    <div class="demo-container">
+                        <div class="grid-demo self-align-grid">
+                            <div class="grid-demo-item self-start">Start</div>
+                            <div class="grid-demo-item self-center">Center</div>
+                            <div class="grid-demo-item self-end">End</div>
+                            <div class="grid-demo-item self-stretch">Stretch</div>
+                        </div>
+                        <code>justify-self: start | center | end | stretch;<br>align-self: start | center | end | stretch;</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="real-world-section">
+            <h2 class="section-title">Real World Examples</h2>
+            
+            <div class="real-world-examples">
+                <div class="example-card">
+                    <h3>Website Layout</h3>
+                    <div class="website-example">
+                        <header class="website-header">Header</header>
+                        <nav class="website-nav">Navigation</nav>
+                        <main class="website-main">Main Content</main>
+                        <aside class="website-sidebar">Sidebar</aside>
+                        <footer class="website-footer">Footer</footer>
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <h3>Photo Gallery</h3>
+                    <div class="gallery-example">
+                        <div class="gallery-item">📷 1</div>
+                        <div class="gallery-item">📷 2</div>
+                        <div class="gallery-item tall">📷 3</div>
+                        <div class="gallery-item">📷 4</div>
+                        <div class="gallery-item wide">📷 5</div>
+                        <div class="gallery-item">📷 6</div>
+                        <div class="gallery-item">📷 7</div>
+                        <div class="gallery-item">📷 8</div>
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <h3>Dashboard</h3>
+                    <div class="dashboard-example">
+                        <div class="dashboard-card stats">📊 Stats</div>
+                        <div class="dashboard-card chart">📈 Chart</div>
+                        <div class="dashboard-card users">👥 Users</div>
+                        <div class="dashboard-card activity">📝 Activity</div>
+                        <div class="dashboard-card notifications">🔔 Notifications</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="properties-section">
+            <h2 class="section-title">Grid Properties Reference</h2>
+            
+            <div class="properties-grid">
+                <div class="property-category">
+                    <h3>🔲 Container Properties</h3>
+                    <ul>
+                        <li><code>display: grid</code> - Enable grid</li>
+                        <li><code>grid-template-columns</code> - Define columns</li>
+                        <li><code>grid-template-rows</code> - Define rows</li>
+                        <li><code>grid-template-areas</code> - Define areas</li>
+                        <li><code>grid-template</code> - Shorthand</li>
+                        <li><code>gap</code> - Space between items</li>
+                        <li><code>row-gap</code> - Space between rows</li>
+                        <li><code>column-gap</code> - Space between columns</li>
+                        <li><code>justify-items</code> - Align items horizontally</li>
+                        <li><code>align-items</code> - Align items vertically</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>🎯 Item Properties</h3>
+                    <ul>
+                        <li><code>grid-column-start</code> - Start column line</li>
+                        <li><code>grid-column-end</code> - End column line</li>
+                        <li><code>grid-row-start</code> - Start row line</li>
+                        <li><code>grid-row-end</code> - End row line</li>
+                        <li><code>grid-column</code> - Column shorthand</li>
+                        <li><code>grid-row</code> - Row shorthand</li>
+                        <li><code>grid-area</code> - Area placement</li>
+                        <li><code>justify-self</code> - Self horizontal alignment</li>
+                        <li><code>align-self</code> - Self vertical alignment</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>📏 Unit Values</h3>
+                    <ul>
+                        <li><code>fr</code> - Fractional unit</li>
+                        <li><code>px</code> - Pixels</li>
+                        <li><code>%</code> - Percentage</li>
+                        <li><code>auto</code> - Automatic sizing</li>
+                        <li><code>min-content</code> - Minimum content</li>
+                        <li><code>max-content</code> - Maximum content</li>
+                        <li><code>minmax()</code> - Size range</li>
+                        <li><code>repeat()</code> - Repeat pattern</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>🎨 Alignment Values</h3>
+                    <ul>
+                        <li><code>start</code> - Start of container</li>
+                        <li><code>end</code> - End of container</li>
+                        <li><code>center</code> - Center of container</li>
+                        <li><code>stretch</code> - Fill container</li>
+                        <li><code>space-between</code> - Equal space between</li>
+                        <li><code>space-around</code> - Equal space around</li>
+                        <li><code>space-evenly</code> - Equal space throughout</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>📐 Functions</h3>
+                    <ul>
+                        <li><code>repeat()</code> - Repeat track pattern</li>
+                        <li><code>minmax()</code> - Define size range</li>
+                        <li><code>fit-content()</code> - Fit to content</li>
+                        <li><code>min()</code> - Minimum value</li>
+                        <li><code>max()</code> - Maximum value</li>
+                        <li><code>clamp()</code> - Clamped value</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <nav class="lesson-navigation">
+            <a href="../flexbox/flexbox.html" class="nav-btn-prev">← Flexbox</a>
+            <a href="../responsive/responsive.html" class="nav-btn-next">Responsive →</a>
+        </nav>
+    </main>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors - CSS Master Guide</title>
+    <link rel="stylesheet" href="selectors.css">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">🎨 CSS Master Guide</h1>
+            <div class="nav-scroll-container">
+                <div class="nav-buttons">
+                    <a href="../index.html" class="nav-btn">🏠 Home</a>
+                    <a href="../introduction/introduction.html" class="nav-btn">📝 Introduction</a>
+                    <a href="../selectors/selectors.html" class="nav-btn">🎯 Selectors</a>
+                    <a href="../box-model/box-model.html" class="nav-btn">📦 Box Model</a>
+                    <a href="../display-position/display-position.html" class="nav-btn">📍 Display & Position</a>
+                    <a href="../flexbox/flexbox.html" class="nav-btn active">🎪 Flexbox</a>
+                    <a href="../grid/grid.html" class="nav-btn">🔲 Grid</a>
+                    <a href="../responsive/responsive.html" class="nav-btn">📱 Responsive</a>
+                    <a href="../animations/animations.html" class="nav-btn">✨ Animations</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <header class="lesson-header">
+            <h1>CSS Selectors</h1>
+            <p>Learn how to target HTML elements with different selector types and specificity</p>
+        </header>
+
+        <section class="content-section">
+            <h2 class="section-title">Basic Selectors</h2>
+            
+            <div class="selector-demo">
+                <div class="demo-item">
+                    <h3>Element Selector</h3>
+                    <p>This paragraph is styled with element selector</p>
+                </div>
+                
+                <div class="demo-item">
+                    <h3>Class Selector</h3>
+                    <p class="highlight">This uses class selector (.highlight)</p>
+                </div>
+                
+                <div class="demo-item">
+                    <h3>ID Selector</h3>
+                    <p id="unique-element">This uses ID selector (#unique-element)</p>
+                </div>
+
+                <div class="demo-item">
+                    <h3>Universal Selector</h3>
+                    <div class="universal-demo">
+                        <span>All elements</span>
+                        <span>inside this container</span>
+                        <span>have red border</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="combinator-section">
+            <h2 class="section-title">Combinator Selectors</h2>
+            
+            <div class="combinator-demo">
+                <div class="demo-item">
+                    <h3>Descendant Selector (space)</h3>
+                    <div class="parent-box">
+                        <p>Direct child paragraph</p>
+                        <div>
+                            <p>Nested paragraph (descendant)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="demo-item">
+                    <h3>Child Selector (>)</h3>
+                    <div class="child-demo">
+                        <p>Direct child (styled)</p>
+                        <div>
+                            <p>Not direct child (not styled)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="demo-item">
+                    <h3>Adjacent Sibling Selector (+)</h3>
+                    <div class="sibling-demo">
+                        <p>First paragraph</p>
+                        <p class="target">Target paragraph</p>
+                        <p>Third paragraph</p>
+                    </div>
+                </div>
+
+                <div class="demo-item">
+                    <h3>General Sibling Selector (~)</h3>
+                    <div class="general-sibling">
+                        <p>First paragraph</p>
+                        <div>Div element</div>
+                        <p>Target sibling 1</p>
+                        <span>Span element</span>
+                        <p>Target sibling 2</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pseudo-section">
+            <h2 class="section-title">Pseudo-classes & Pseudo-elements</h2>
+            
+            <div class="pseudo-demo">
+                <div class="demo-item">
+                    <h3>Pseudo-classes</h3>
+                    <div class="pseudo-classes">
+                        <button class="hover-btn">Hover me</button>
+                        <input type="text" class="focus-input" placeholder="Focus me">
+                        <a href="#" class="link-pseudo">Visit me</a>
+                    </div>
+                </div>
+
+                <div class="demo-item">
+                    <h3>Pseudo-elements</h3>
+                    <div class="pseudo-elements">
+                        <p class="first-line">This paragraph demonstrates ::first-line pseudo-element. The first line will be styled differently from the rest of the text content.</p>
+                        <p class="first-letter">This paragraph uses ::first-letter to style the first character differently.</p>
+                    </div>
+                </div>
+
+                <div class="demo-item">
+                    <h3>Structural Pseudo-classes</h3>
+                    <div class="structural-demo">
+                        <p>First child</p>
+                        <p>Second child</p>
+                        <p>Third child</p>
+                        <p>Fourth child</p>
+                        <p>Last child</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="properties-section">
+            <h2 class="section-title">Selector Properties & Values</h2>
+            
+            <div class="properties-grid">
+                <div class="property-category">
+                    <h3>🎯 Basic Selectors</h3>
+                    <ul>
+                        <li><code>element</code> - Element selector</li>
+                        <li><code>.class</code> - Class selector</li>
+                        <li><code>#id</code> - ID selector</li>
+                        <li><code>*</code> - Universal selector</li>
+                        <li><code>[attribute]</code> - Attribute selector</li>
+                        <li><code>selector1, selector2</code> - Group selector</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>🔗 Combinators</h3>
+                    <ul>
+                        <li><code>selector1 selector2</code> - Descendant</li>
+                        <li><code>selector1 > selector2</code> - Child</li>
+                        <li><code>selector1 + selector2</code> - Adjacent sibling</li>
+                        <li><code>selector1 ~ selector2</code> - General sibling</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>🎭 Pseudo-classes</h3>
+                    <ul>
+                        <li><code>:hover</code> - Mouse over</li>
+                        <li><code>:active</code> - Active element</li>
+                        <li><code>:focus</code> - Focused element</li>
+                        <li><code>:visited</code> - Visited link</li>
+                        <li><code>:nth-child()</code> - Nth child</li>
+                        <li><code>:first-child</code> - First child</li>
+                        <li><code>:last-child</code> - Last child</li>
+                        <li><code>:not()</code> - Negation</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>✨ Pseudo-elements</h3>
+                    <ul>
+                        <li><code>::before</code> - Before content</li>
+                        <li><code>::after</code> - After content</li>
+                        <li><code>::first-line</code> - First line</li>
+                        <li><code>::first-letter</code> - First letter</li>
+                        <li><code>::selection</code> - Selected text</li>
+                    </ul>
+                </div>
+
+
+                <div class="property-category">
+                    <h3>🎪 Attribute Selectors</h3>
+                    <ul>
+                        <li><code>[attr]</code> - Has attribute</li>
+                        <li><code>[attr=value]</code> - Exact value</li>
+                        <li><code>[attr^=value]</code> - Starts with</li>
+                        <li><code>[attr$=value]</code> - Ends with</li>
+                        <li><code>[attr*=value]</code> - Contains</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <nav class="lesson-navigation">
+            <a href="../introduction/introduction.html" class="nav-btn-prev">← Introduction</a>
+            <a href="../box-model/box-model.html" class="nav-btn-next">Box Model →</a>
+        </nav>
+    </main>
+</body>
+</html>

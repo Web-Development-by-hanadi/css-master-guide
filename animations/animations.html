@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations - CSS Master Guide</title>
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">🎨 CSS Master Guide</h1>
+            <div class="nav-scroll-container">
+                <div class="nav-buttons">
+                    <a href="../index.html" class="nav-btn">🏠 Home</a>
+                    <a href="../introduction/introduction.html" class="nav-btn">📝 Introduction</a>
+                    <a href="../selectors/selectors.html" class="nav-btn">🎯 Selectors</a>
+                    <a href="../box-model/box-model.html" class="nav-btn">📦 Box Model</a>
+                    <a href="../display-position/display-position.html" class="nav-btn">📍 Display & Position</a>
+                    <a href="../flexbox/flexbox.html" class="nav-btn active">🎪 Flexbox</a>
+                    <a href="../grid/grid.html" class="nav-btn">🔲 Grid</a>
+                    <a href="../responsive/responsive.html" class="nav-btn">📱 Responsive</a>
+                    <a href="../animations/animations.html" class="nav-btn">✨ Animations</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <header class="lesson-header">
+            <h1>CSS Animations</h1>
+            <p>Bring your websites to life with smooth transitions, transforms, and keyframe animations</p>
+        </header>
+
+        <section class="intro-section">
+            <h2 class="section-title">What are CSS Animations?</h2>
+            <div class="intro-content">
+                <div class="intro-text">
+                    <p>CSS animations allow you to animate transitions from one CSS style configuration to another, creating engaging and interactive user experiences.</p>
+                    <div class="key-features">
+                        <div class="feature">
+                            <span class="feature-icon">🔄</span>
+                            <span>Transitions</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🎯</span>
+                            <span>Transforms</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">⏱️</span>
+                            <span>Keyframes</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🎪</span>
+                            <span>Performance</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro-visual">
+                    <div class="animation-concept">
+                        <div class="animated-box concept-box">
+                            <span>Animation</span>
+                        </div>
+                        <div class="animation-path"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="transitions-section">
+            <h2 class="section-title">CSS Transitions</h2>
+            
+            <div class="property-examples">
+                <div class="property-demo">
+                    <h3>Basic Transitions</h3>
+                    <p>Smoothly animate property changes</p>
+                    <div class="demo-container">
+                        <div class="transition-demo basic-transition">
+                            <div class="transition-box">Hover Me</div>
+                        </div>
+                        <code>transition: all 0.3s ease;</code>
+                    </div>
+                </div>
+
+                <div class="property-demo">
+                    <h3>Transition Properties</h3>
+                    <p>Control different aspects of transitions</p>
+                    <div class="demo-container">
+                        <div class="transition-demo property-transitions">
+                            <div class="transition-box duration">Duration<br>2s</div>
+                            <div class="transition-box delay">Delay<br>1s</div>
+                            <div class="transition-box timing">Timing<br>ease-in-out</div>
+                        </div>
+                        <code>transition: property duration timing-function delay;</code>
+                    </div>
+                </div>
+
+                <div class="property-demo">
+                    <h3>Multiple Transitions</h3>
+                    <p>Animate multiple properties with different settings</p>
+                    <div class="demo-container">
+                        <div class="transition-demo multiple-transitions">
+                            <div class="transition-box multi">Multiple Properties</div>
+                        </div>
+                        <code>transition: background-color 0.3s ease,<br>transform 0.5s ease-in-out,<br>border-radius 0.4s ease;</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="transforms-section">
+            <h2 class="section-title">CSS Transforms</h2>
+            
+            <div class="property-examples">
+                <div class="property-demo">
+                    <h3>2D Transforms</h3>
+                    <p>Move, rotate, scale, and skew elements</p>
+                    <div class="demo-container">
+                        <div class="transform-demo transform-2d">
+                            <div class="transform-box translate">Translate</div>
+                            <div class="transform-box rotate">Rotate</div>
+                            <div class="transform-box scale">Scale</div>
+                            <div class="transform-box skew">Skew</div>
+                        </div>
+                        <code>transform: translateX(50px);<br>transform: rotate(45deg);<br>transform: scale(1.2);<br>transform: skew(20deg);</code>
+                    </div>
+                </div>
+
+                <div class="property-demo">
+                    <h3>3D Transforms</h3>
+                    <p>Create three-dimensional transformations</p>
+                    <div class="demo-container">
+                        <div class="transform-demo transform-3d">
+                            <div class="transform-box rotate-3d">Rotate 3D</div>
+                            <div class="transform-box perspective">Perspective</div>
+                        </div>
+                        <code>transform: rotate3d(1, 1, 1, 45deg);<br>transform: perspective(500px) rotateY(45deg);</code>
+                    </div>
+                </div>
+
+                <div class="property-demo">
+                    <h3>Transform Origin</h3>
+                    <p>Change the origin point of transformations</p>
+                    <div class="demo-container">
+                        <div class="transform-demo origin-demo">
+                            <div class="transform-box origin-top-left">Top Left</div>
+                            <div class="transform-box origin-center">Center</div>
+                            <div class="transform-box origin-bottom-right">Bottom Right</div>
+                        </div>
+                        <code>transform-origin: top left;<br>transform-origin: center;<br>transform-origin: bottom right;</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="keyframes-section">
+            <h2 class="section-title">Keyframe Animations</h2>
+            
+            <div class="property-examples">
+                <div class="property-demo">
+                    <h3>Basic Keyframes</h3>
+                    <p>Create complex animations with multiple steps</p>
+                    <div class="demo-container">
+                        <div class="keyframe-demo basic-keyframe">
+                            <div class="keyframe-box">Animate Me</div>
+                        </div>
+                        <code>@keyframes slide {<br>  0% { transform: translateX(0); }<br>  100% { transform: translateX(200px); }<br>}</code>
+                    </div>
+                </div>
+
+                <div class="property-demo">
+                    <h3>Animation Properties</h3>
+                    <p>Control animation behavior and timing</p>
+                    <div class="demo-container">
+                        <div class="keyframe-demo animation-properties">
+                            <div class="keyframe-box infinite">Infinite</div>
+                            <div class="keyframe-box alternate">Alternate</div>
+                            <div class="keyframe-box paused">Paused</div>
+                        </div>
+                        <code>animation: name duration timing-function<br>delay iteration-count direction fill-mode;</code>
+                    </div>
+                </div>
+
+                <div class="property-demo">
+                    <h3>Multiple Keyframes</h3>
+                    <p>Complex animations with multiple states</p>
+                    <div class="demo-container">
+                        <div class="keyframe-demo complex-keyframe">
+                            <div class="keyframe-box complex">Complex Animation</div>
+                        </div>
+                        <code>@keyframes complex {<br>  0% { transform: translateX(0) rotate(0); }<br>  50% { transform: translateX(150px) rotate(180deg); }<br>  100% { transform: translateX(0) rotate(360deg); }<br>}</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="real-world-section">
+            <h2 class="section-title">Real World Examples</h2>
+            
+            <div class="real-world-examples">
+                <div class="example-card">
+                    <h3>Loading Animations</h3>
+                    <div class="loading-examples">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-dots">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="loading-bar">
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <h3>Interactive Buttons</h3>
+                    <div class="button-examples">
+                        <button class="animated-btn hover-scale">Hover Scale</button>
+                        <button class="animated-btn hover-rotate">Hover Rotate</button>
+                        <button class="animated-btn click-bounce">Click Me</button>
+                        <button class="animated-btn pulse">Pulse Effect</button>
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <h3>Page Transitions</h3>
+                    <div class="transition-examples">
+                        <div class="page-card fade-in">
+                            <h4>Fade In</h4>
+                            <p>Content fades in smoothly</p>
+                        </div>
+                        <div class="page-card slide-in">
+                            <h4>Slide In</h4>
+                            <p>Content slides from left</p>
+                        </div>
+                        <div class="page-card bounce-in">
+                            <h4>Bounce In</h4>
+                            <p>Content bounces into place</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="properties-section">
+            <h2 class="section-title">Animation Properties Reference</h2>
+            
+            <div class="properties-grid">
+                <div class="property-category">
+                    <h3>🔄 Transition Properties</h3>
+                    <ul>
+                        <li><code>transition-property</code> - Properties to animate</li>
+                        <li><code>transition-duration</code> - Animation duration</li>
+                        <li><code>transition-timing-function</code> - Speed curve</li>
+                        <li><code>transition-delay</code> - Delay before start</li>
+                        <li><code>transition</code> - Shorthand property</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>🎯 Transform Properties</h3>
+                    <ul>
+                        <li><code>transform</code> - 2D/3D transformations</li>
+                        <li><code>transform-origin</code> - Transformation origin</li>
+                        <li><code>transform-style</code> - 3D space rendering</li>
+                        <li><code>perspective</code> - 3D perspective</li>
+                        <li><code>perspective-origin</code> - Perspective origin</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>⏱️ Animation Properties</h3>
+                    <ul>
+                        <li><code>animation-name</code> - Keyframes name</li>
+                        <li><code>animation-duration</code> - Animation duration</li>
+                        <li><code>animation-timing-function</code> - Speed curve</li>
+                        <li><code>animation-delay</code> - Delay before start</li>
+                        <li><code>animation-iteration-count</code> - Repeat count</li>
+                        <li><code>animation-direction</code> - Play direction</li>
+                        <li><code>animation-fill-mode</code> - Styles before/after</li>
+                        <li><code>animation-play-state</code> - Running/paused</li>
+                        <li><code>animation</code> - Shorthand property</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>📐 Transform Functions</h3>
+                    <ul>
+                        <li><code>translate()</code> - Move element</li>
+                        <li><code>rotate()</code> - Rotate element</li>
+                        <li><code>scale()</code> - Scale element</li>
+                        <li><code>skew()</code> - Skew element</li>
+                        <li><code>matrix()</code> - 2D transformation matrix</li>
+                        <li><code>translate3d()</code> - 3D translation</li>
+                        <li><code>rotate3d()</code> - 3D rotation</li>
+                        <li><code>scale3d()</code> - 3D scaling</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>⚡ Timing Functions</h3>
+                    <ul>
+                        <li><code>ease</code> - Slow start/fast end</li>
+                        <li><code>linear</code> - Constant speed</li>
+                        <li><code>ease-in</code> - Slow start</li>
+                        <li><code>ease-out</code> - Slow end</li>
+                        <li><code>ease-in-out</code> - Slow start/end</li>
+                        <li><code>cubic-bezier()</code> - Custom curve</li>
+                        <li><code>steps()</code> - Step-based animation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <nav class="lesson-navigation">
+            <a href="../responsive/responsive.html" class="nav-btn-prev">← Responsive</a>
+            <a href="../../index.html" class="nav-btn-next">Home →</a>
+        </nav>
+    </main>
+</body>
+</html>

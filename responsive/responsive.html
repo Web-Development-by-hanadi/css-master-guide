@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design - CSS Master Guide</title>
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">🎨 CSS Master Guide</h1>
+            <div class="nav-scroll-container">
+                <div class="nav-buttons">
+                    <a href="../index.html" class="nav-btn">🏠 Home</a>
+                    <a href="../introduction/introduction.html" class="nav-btn">📝 Introduction</a>
+                    <a href="../selectors/selectors.html" class="nav-btn">🎯 Selectors</a>
+                    <a href="../box-model/box-model.html" class="nav-btn">📦 Box Model</a>
+                    <a href="../display-position/display-position.html" class="nav-btn">📍 Display & Position</a>
+                    <a href="../flexbox/flexbox.html" class="nav-btn active">🎪 Flexbox</a>
+                    <a href="../grid/grid.html" class="nav-btn">🔲 Grid</a>
+                    <a href="../responsive/responsive.html" class="nav-btn">📱 Responsive</a>
+                    <a href="../animations/animations.html" class="nav-btn">✨ Animations</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <header class="lesson-header">
+            <h1>Responsive Design</h1>
+            <p>Create websites that look great on all devices with modern responsive techniques</p>
+        </header>
+
+        <section class="intro-section">
+            <h2 class="section-title">What is Responsive Design?</h2>
+            <div class="intro-content">
+                <div class="intro-text">
+                    <p>Responsive Web Design makes your web page look good on all devices by using flexible layouts, flexible images, and CSS media queries.</p>
+                    <div class="key-features">
+                        <div class="feature">
+                            <span class="feature-icon">📱</span>
+                            <span>Mobile First</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">💻</span>
+                            <span>Desktop Ready</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🔄</span>
+                            <span>Fluid Layouts</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🎯</span>
+                            <span>Media Queries</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro-visual">
+                    <div class="responsive-concept">
+                        <div class="device-mockup mobile">
+                            <div class="screen">Mobile</div>
+                        </div>
+                        <div class="device-mockup tablet">
+                            <div class="screen">Tablet</div>
+                        </div>
+                        <div class="device-mockup desktop">
+                            <div class="screen">Desktop</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="viewport-section">
+            <h2 class="section-title">Viewport Meta Tag</h2>
+            <div class="viewport-content">
+                <div class="code-example">
+                    <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+                </div>
+                <div class="explanation">
+                    <p>The viewport meta tag controls the page's dimensions and scaling on mobile devices.</p>
+                    <div class="viewport-demo">
+                        <div class="demo-with-viewport">
+                            <h4>With Viewport Meta Tag</h4>
+                            <div class="mobile-frame">
+                                <div class="mobile-content">Content scales properly</div>
+                            </div>
+                        </div>
+                        <div class="demo-without-viewport">
+                            <h4>Without Viewport Meta Tag</h4>
+                            <div class="mobile-frame no-viewport">
+                                <div class="mobile-content">Content too small</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="media-queries-section">
+            <h2 class="section-title">Media Queries</h2>
+            
+            <div class="property-examples">
+                <div class="property-demo">
+                    <h3>Breakpoints</h3>
+                    <p>Define different styles for different screen sizes</p>
+                    <div class="demo-container">
+                        <div class="breakpoint-demo">
+                            <div class="breakpoint mobile">Mobile<br>&lt; 768px</div>
+                            <div class="breakpoint tablet">Tablet<br>768px - 1024px</div>
+                            <div class="breakpoint desktop">Desktop<br>&gt; 1024px</div>
+                        </div>
+                        <code>@media (max-width: 768px) { ... }<br>@media (min-width: 769px) and (max-width: 1024px) { ... }<br>@media (min-width: 1025px) { ... }</code>
+                    </div>
+                </div>
+
+                <div class="property-demo">
+                    <h3>Common Breakpoints</h3>
+                    <p>Standard breakpoints for different devices</p>
+                    <div class="demo-container">
+                        <div class="common-breakpoints">
+                            <div class="breakpoint-item">
+                                <span class="device">📱 Mobile</span>
+                                <span class="size">0px - 767px</span>
+                            </div>
+                            <div class="breakpoint-item">
+                                <span class="device">📟 Tablet</span>
+                                <span class="size">768px - 1023px</span>
+                            </div>
+                            <div class="breakpoint-item">
+                                <span class="device">💻 Laptop</span>
+                                <span class="size">1024px - 1439px</span>
+                            </div>
+                            <div class="breakpoint-item">
+                                <span class="device">🖥️ Desktop</span>
+                                <span class="size">1440px+</span>
+                            </div>
+                        </div>
+                        <code>/* Mobile First Approach */<br>@media (min-width: 768px) { ... }<br>@media (min-width: 1024px) { ... }<br>@media (min-width: 1440px) { ... }</code>
+                    </div>
+                </div>
+
+                <div class="property-demo">
+                    <h3>Orientation & Features</h3>
+                    <p>Target specific device features and orientations</p>
+                    <div class="demo-container">
+                        <div class="feature-demo">
+                            <div class="feature-item portrait">Portrait</div>
+                            <div class="feature-item landscape">Landscape</div>
+                            <div class="feature-item hover">Hover Support</div>
+                            <div class="feature-item touch">Touch Device</div>
+                        </div>
+                        <code>@media (orientation: portrait) { ... }<br>@media (hover: hover) { ... }<br>@media (pointer: coarse) { ... }</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="responsive-units-section">
+            <h2 class="section-title">Responsive Units</h2>
+            
+            <div class="units-examples">
+                <div class="unit-demo">
+                    <h3>Relative Units</h3>
+                    <div class="unit-comparison">
+                        <div class="unit-item">
+                            <span class="unit-name">%</span>
+                            <span class="unit-desc">Percentage of parent</span>
+                            <div class="unit-visual percent">50% width</div>
+                        </div>
+                        <div class="unit-item">
+                            <span class="unit-name">vw/vh</span>
+                            <span class="unit-desc">Viewport width/height</span>
+                            <div class="unit-visual viewport">50vw width</div>
+                        </div>
+                        <div class="unit-item">
+                            <span class="unit-name">rem</span>
+                            <span class="unit-desc">Root element font-size</span>
+                            <div class="unit-visual rem">2rem font</div>
+                        </div>
+                        <div class="unit-item">
+                            <span class="unit-name">em</span>
+                            <span class="unit-desc">Parent element font-size</span>
+                            <div class="unit-visual em">2em font</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="unit-demo">
+                    <h3>Flexible Layouts</h3>
+                    <div class="flexible-layout-demo">
+                        <div class="responsive-grid">
+                            <div class="grid-item">Flex Item</div>
+                            <div class="grid-item">Flex Item</div>
+                            <div class="grid-item">Flex Item</div>
+                            <div class="grid-item">Flex Item</div>
+                        </div>
+                        <code>display: grid;<br>grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));<br>gap: 1rem;</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="real-world-section">
+            <h2 class="section-title">Real World Examples</h2>
+            
+            <div class="real-world-examples">
+                <div class="example-card">
+                    <h3>Responsive Navigation</h3>
+                    <div class="responsive-nav-example">
+                        <div class="nav-brand">Logo</div>
+                        <nav class="nav-menu">
+                            <a href="#" class="nav-link">Home</a>
+                            <a href="#" class="nav-link">About</a>
+                            <a href="#" class="nav-link">Services</a>
+                            <a href="#" class="nav-link">Contact</a>
+                        </nav>
+                        <button class="menu-toggle">☰</button>
+                    </div>
+                    <p class="example-note">Try resizing your browser to see the mobile menu</p>
+                </div>
+
+                <div class="example-card">
+                    <h3>Responsive Card Grid</h3>
+                    <div class="responsive-card-grid">
+                        <div class="responsive-card">
+                            <div class="card-image"></div>
+                            <div class="card-content">
+                                <h4>Product One</h4>
+                                <p>This card will adapt to different screen sizes.</p>
+                                <span class="price">$29.99</span>
+                            </div>
+                        </div>
+                        <div class="responsive-card">
+                            <div class="card-image"></div>
+                            <div class="card-content">
+                                <h4>Product Two</h4>
+                                <p>Responsive design ensures great user experience.</p>
+                                <span class="price">$39.99</span>
+                            </div>
+                        </div>
+                        <div class="responsive-card">
+                            <div class="card-image"></div>
+                            <div class="card-content">
+                                <h4>Product Three</h4>
+                                <p>Works perfectly on mobile, tablet, and desktop.</p>
+                                <span class="price">$49.99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <h3>Flexible Typography</h3>
+                    <div class="typography-example">
+                        <h1 class="responsive-heading">Responsive Heading</h1>
+                        <p class="responsive-text">This text scales smoothly across different screen sizes using clamp() function and viewport units.</p>
+                        <div class="size-indicators">
+                            <div class="size-indicator mobile">Mobile Size</div>
+                            <div class="size-indicator tablet">Tablet Size</div>
+                            <div class="size-indicator desktop">Desktop Size</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="properties-section">
+            <h2 class="section-title">Responsive Properties Reference</h2>
+            
+            <div class="properties-grid">
+                <div class="property-category">
+                    <h3>📱 Media Queries</h3>
+                    <ul>
+                        <li><code>@media (max-width: ...)</code> - Maximum width</li>
+                        <li><code>@media (min-width: ...)</code> - Minimum width</li>
+                        <li><code>@media (orientation: portrait)</code> - Portrait mode</li>
+                        <li><code>@media (orientation: landscape)</code> - Landscape mode</li>
+                        <li><code>@media (hover: hover)</code> - Hover capable</li>
+                        <li><code>@media (pointer: coarse)</code> - Touch device</li>
+                        <li><code>@media (prefers-color-scheme: dark)</code> - Dark mode</li>
+                        <li><code>@media (prefers-reduced-motion)</code> - Reduce motion</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>📐 Responsive Units</h3>
+                    <ul>
+                        <li><code>%</code> - Percentage of parent</li>
+                        <li><code>vw</code> - Viewport width (1vw = 1% of viewport width)</li>
+                        <li><code>vh</code> - Viewport height (1vh = 1% of viewport height)</li>
+                        <li><code>vmin</code> - Minimum of vw and vh</li>
+                        <li><code>vmax</code> - Maximum of vw and vh</li>
+                        <li><code>rem</code> - Relative to root font-size</li>
+                        <li><code>em</code> - Relative to parent font-size</li>
+                        <li><code>ch</code> - Width of "0" character</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>🎯 Layout Techniques</h3>
+                    <ul>
+                        <li><code>flex-wrap: wrap</code> - Flexible wrapping</li>
+                        <li><code>grid-template-columns: repeat(auto-fit, minmax())</code> - Auto grid</li>
+                        <li><code>object-fit: cover</code> - Responsive images</li>
+                        <li><code>clamp(min, preferred, max)</code> - Fluid sizing</li>
+                        <li><code>min()</code> - Minimum value</li>
+                        <li><code>max()</code> - Maximum value</li>
+                        <li><code>calc()</code> - Calculations</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>⚡ Common Breakpoints</h3>
+                    <ul>
+                        <li><code>320px</code> - Small mobile</li>
+                        <li><code>375px</code> - Mobile</li>
+                        <li><code>768px</code> - Tablet</li>
+                        <li><code>1024px</code> - Small desktop</li>
+                        <li><code>1280px</code> - Desktop</li>
+                        <li><code>1440px</code> - Large desktop</li>
+                        <li><code>1920px</code> - HD desktop</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>🖼️ Responsive Images</h3>
+                    <ul>
+                        <li><code>max-width: 100%</code> - Prevent overflow</li>
+                        <li><code>height: auto</code> - Maintain aspect ratio</li>
+                        <li><code>srcset</code> - Multiple image sources</li>
+                        <li><code>sizes</code> - Image size conditions</li>
+                        <li><code>picture</code> - Art direction</li>
+                        <li><code>object-fit</code> - Image positioning</li>
+                        <li><code>object-position</code> - Image alignment</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <nav class="lesson-navigation">
+            <a href="../grid/grid.html" class="nav-btn-prev">← Grid</a>
+            <a href="../animations/animations.html" class="nav-btn-next">Animations →</a>
+        </nav>
+    </main>
+</body>
+</html>

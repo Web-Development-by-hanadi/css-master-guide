@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model - CSS Master Guide</title>
+    <link rel="stylesheet" href="box-model.css">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+ 
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">🎨 CSS Master Guide</h1>
+            <div class="nav-scroll-container">
+                <div class="nav-buttons">
+                    <a href="../index.html" class="nav-btn">🏠 Home</a>
+                    <a href="../introduction/introduction.html" class="nav-btn">📝 Introduction</a>
+                    <a href="../selectors/selectors.html" class="nav-btn">🎯 Selectors</a>
+                    <a href="../box-model/box-model.html" class="nav-btn">📦 Box Model</a>
+                    <a href="../display-position/display-position.html" class="nav-btn">📍 Display & Position</a>
+                    <a href="../flexbox/flexbox.html" class="nav-btn active">🎪 Flexbox</a>
+                    <a href="../grid/grid.html" class="nav-btn">🔲 Grid</a>
+                    <a href="../responsive/responsive.html" class="nav-btn">📱 Responsive</a>
+                    <a href="../animations/animations.html" class="nav-btn">✨ Animations</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="main-container">
+        <header class="lesson-header">
+            <h1>CSS Box Model</h1>
+            <p>Understand how margin, padding, border, and content work together to create layout</p>
+        </header>
+
+        <section class="visualization-section">
+            <h2 class="section-title">Box Model Visualization</h2>
+            
+            <div class="box-model-demo">
+                <div class="margin-box">
+                    <span class="label">Margin</span>
+                    <div class="border-box">
+                        <span class="label">Border</span>
+                        <div class="padding-box">
+                            <span class="label">Padding</span>
+                            <div class="content-box">
+                                <span class="label">Content</span>
+                                <div class="content-text">
+                                    This is the actual content of the element
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box-model-explanation">
+                <div class="explanation-item">
+                    <div class="color-swatch margin-color"></div>
+                    <div class="explanation-text">
+                        <h4>Margin</h4>
+                        <p>Space outside the border - separates element from others</p>
+                    </div>
+                </div>
+                <div class="explanation-item">
+                    <div class="color-swatch border-color"></div>
+                    <div class="explanation-text">
+                        <h4>Border</h4>
+                        <p>Line around padding and content - visible boundary</p>
+                    </div>
+                </div>
+                <div class="explanation-item">
+                    <div class="color-swatch padding-color"></div>
+                    <div class="explanation-text">
+                        <h4>Padding</h4>
+                        <p>Space between content and border - inside spacing</p>
+                    </div>
+                </div>
+                <div class="explanation-item">
+                    <div class="color-swatch content-color"></div>
+                    <div class="explanation-text">
+                        <h4>Content</h4>
+                        <p>Actual content like text, images, etc.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="comparison-section">
+            <h2 class="section-title">Box-Sizing Comparison</h2>
+            
+            <div class="sizing-comparison">
+                <div class="sizing-demo">
+                    <h3>content-box (Default)</h3>
+                    <div class="box-content-box">
+                        <div class="size-info">
+                            <p>Width: 200px + 40px padding + 4px border = <strong>244px total</strong></p>
+                        </div>
+                        <div class="box-content">
+                            Content Area (200px)
+                        </div>
+                        <div class="box-padding">
+                            Padding (20px each side)
+                        </div>
+                        <div class="box-border">
+                            Border (2px each side)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sizing-demo">
+                    <h3>border-box</h3>
+                    <div class="box-border-box">
+                        <div class="size-info">
+                            <p>Width: <strong>200px total</strong> (includes padding & border)</p>
+                        </div>
+                        <div class="box-content">
+                            Content Area (156px)
+                        </div>
+                        <div class="box-padding">
+                            Padding (20px each side)
+                        </div>
+                        <div class="box-border">
+                            Border (2px each side)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="examples-section">
+            <h2 class="section-title">Practical Examples</h2>
+            
+            <div class="practical-examples">
+                <div class="example-card">
+                    <h3>Margin Examples</h3>
+                    <div class="margin-examples">
+                        <div class="margin-shorthand">
+                            <div class="box">margin: 20px</div>
+                            <p>All sides: 20px</p>
+                        </div>
+                        <div class="margin-vertical-horizontal">
+                            <div class="box">margin: 20px 40px</div>
+                            <p>Vertical: 20px, Horizontal: 40px</p>
+                        </div>
+                        <div class="margin-four-sides">
+                            <div class="box">margin: 10px 20px 30px 40px</div>
+                            <p>Top, Right, Bottom, Left</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <h3>Padding Examples</h3>
+                    <div class="padding-examples">
+                        <div class="padding-shorthand">
+                            <div class="box">padding: 20px</div>
+                            <p>All sides: 20px</p>
+                        </div>
+                        <div class="padding-vertical-horizontal">
+                            <div class="box">padding: 20px 40px</div>
+                            <p>Vertical: 20px, Horizontal: 40px</p>
+                        </div>
+                        <div class="padding-individual">
+                            <div class="box">
+                                <span>padding-top: 10px</span>
+                                <span>padding-right: 20px</span>
+                                <span>padding-bottom: 30px</span>
+                                <span>padding-left: 40px</span>
+                            </div>
+                            <p>Individual properties</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <h3>Border Examples</h3>
+                    <div class="border-examples">
+                        <div class="border-solid">
+                            <div class="box">border: 2px solid #3498db</div>
+                        </div>
+                        <div class="border-dashed">
+                            <div class="box">border: 3px dashed #e74c3c</div>
+                        </div>
+                        <div class="border-dotted">
+                            <div class="box">border: 4px dotted #2ecc71</div>
+                        </div>
+                        <div class="border-radius">
+                            <div class="box">border-radius: 15px</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="properties-section">
+            <h2 class="section-title">Box Model Properties</h2>
+            
+            <div class="properties-grid">
+                <div class="property-category">
+                    <h3>📦 Box Model Core</h3>
+                    <ul>
+                        <li><code>width</code> - Content width</li>
+                        <li><code>height</code> - Content height</li>
+                        <li><code>margin</code> - Outer spacing</li>
+                        <li><code>padding</code> - Inner spacing</li>
+                        <li><code>border</code> - Border styling</li>
+                        <li><code>box-sizing</code> - Box model type</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>🎨 Margin Properties</h3>
+                    <ul>
+                        <li><code>margin-top</code> - Top margin</li>
+                        <li><code>margin-right</code> - Right margin</li>
+                        <li><code>margin-bottom</code> - Bottom margin</li>
+                        <li><code>margin-left</code> - Left margin</li>
+                        <li><code>margin: 10px</code> - All sides</li>
+                        <li><code>margin: 10px 20px</code> - Vertical & horizontal</li>
+                        <li><code>margin: 10px 20px 30px 40px</code> - Top, right, bottom, left</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>📐 Padding Properties</h3>
+                    <ul>
+                        <li><code>padding-top</code> - Top padding</li>
+                        <li><code>padding-right</code> - Right padding</li>
+                        <li><code>padding-bottom</code> - Bottom padding</li>
+                        <li><code>padding-left</code> - Left padding</li>
+                        <li><code>padding: 10px</code> - All sides</li>
+                        <li><code>padding: 10px 20px</code> - Vertical & horizontal</li>
+                        <li><code>padding: 10px 20px 30px 40px</code> - Top, right, bottom, left</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>🔄 Box-Sizing</h3>
+                    <ul>
+                        <li><code>box-sizing: content-box</code> - Default (adds padding/border)</li>
+                        <li><code>box-sizing: border-box</code> - Includes padding/border in width/height</li>
+                        <li><code>inherit</code> - Inherit from parent</li>
+                        <li><code>initial</code> - Default value</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>🎯 Border Properties</h3>
+                    <ul>
+                        <li><code>border-width</code> - Border thickness</li>
+                        <li><code>border-style</code> - Border style (solid, dashed, etc.)</li>
+                        <li><code>border-color</code> - Border color</li>
+                        <li><code>border-radius</code> - Rounded corners</li>
+                        <li><code>border</code> - Shorthand property</li>
+                        <li><code>border-top, border-right, etc.</code> - Individual sides</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>📏 Sizing Constraints</h3>
+                    <ul>
+                        <li><code>min-width</code> - Minimum width</li>
+                        <li><code>max-width</code> - Maximum width</li>
+                        <li><code>min-height</code> - Minimum height</li>
+                        <li><code>max-height</code> - Maximum height</li>
+                        <li><code>overflow</code> - Content overflow behavior</li>
+                        <li><code>box-shadow</code> - Shadow effects</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <nav class="lesson-navigation">
+            <a href="../selectors/selectors.html" class="nav-btn-prev">← Selectors</a>
+            <a href="../display-position/display-position.html" class="nav-btn-next">Display & Position →</a>
+        </nav>
+    </main>
+</body>
+</html>

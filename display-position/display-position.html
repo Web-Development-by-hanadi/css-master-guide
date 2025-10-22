@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display & Position - CSS Master Guide</title>
+    <link rel="stylesheet" href="display-position.css">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">🎨 CSS Master Guide</h1>
+            <div class="nav-scroll-container">
+                <div class="nav-buttons">
+                    <a href="../index.html" class="nav-btn">🏠 Home</a>
+                    <a href="../introduction/introduction.html" class="nav-btn">📝 Introduction</a>
+                    <a href="../selectors/selectors.html" class="nav-btn">🎯 Selectors</a>
+                    <a href="../box-model/box-model.html" class="nav-btn">📦 Box Model</a>
+                    <a href="../display-position/display-position.html" class="nav-btn">📍 Display & Position</a>
+                    <a href="../flexbox/flexbox.html" class="nav-btn active">🎪 Flexbox</a>
+                    <a href="../grid/grid.html" class="nav-btn">🔲 Grid</a>
+                    <a href="../responsive/responsive.html" class="nav-btn">📱 Responsive</a>
+                    <a href="../animations/animations.html" class="nav-btn">✨ Animations</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <header class="lesson-header">
+            <h1>Display & Position</h1>
+            <p>Master CSS layout fundamentals with display properties and positioning techniques</p>
+        </header>
+
+        <section class="intro-section">
+            <h2 class="section-title">What are Display and Position?</h2>
+            <div class="intro-content">
+                <div class="intro-text">
+                    <p>The display property determines how an element is displayed, while position property controls how an element is positioned in the document.</p>
+                    <div class="key-features">
+                        <div class="feature">
+                            <span class="feature-icon">📦</span>
+                            <span>Display Types</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">📍</span>
+                            <span>Positioning</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🎯</span>
+                            <span>Layout Control</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">⚡</span>
+                            <span>Flow Control</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro-visual">
+                    <div class="layout-concept">
+                        <div class="layout-container">
+                            <div class="layout-item block">Block</div>
+                            <div class="layout-item inline">Inline</div>
+                            <div class="layout-item inline-block">Inline-Block</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="display-section">
+            <h2 class="section-title">Display Properties</h2>
+            
+            <div class="property-examples">
+                <div class="property-demo">
+                    <h3>Block Display</h3>
+                    <p>Elements take full width and create line breaks</p>
+                    <div class="demo-container">
+                        <div class="display-demo">
+                            <div class="display-element block-element">Block Element 1</div>
+                            <div class="display-element block-element">Block Element 2</div>
+                            <div class="display-element block-element">Block Element 3</div>
+                        </div>
+                        <code>display: block;</code>
+                    </div>
+                </div>
+
+                <div class="property-demo">
+                    <h3>Inline Display</h3>
+                    <p>Elements flow inline and don't create line breaks</p>
+                    <div class="demo-container">
+                        <div class="display-demo">
+                            <span class="display-element inline-element">Inline Element 1</span>
+                            <span class="display-element inline-element">Inline Element 2</span>
+                            <span class="display-element inline-element">Inline Element 3</span>
+                        </div>
+                        <code>display: inline;</code>
+                    </div>
+                </div>
+
+                <div class="property-demo">
+                    <h3>Inline-Block Display</h3>
+                    <p>Inline flow with block-level properties</p>
+                    <div class="demo-container">
+                        <div class="display-demo">
+                            <div class="display-element inline-block-element">Inline-Block 1</div>
+                            <div class="display-element inline-block-element">Inline-Block 2</div>
+                            <div class="display-element inline-block-element">Inline-Block 3</div>
+                        </div>
+                        <code>display: inline-block;</code>
+                    </div>
+                </div>
+
+                <div class="property-demo">
+                    <h3>None & Visibility</h3>
+                    <p>Hide elements from the layout</p>
+                    <div class="demo-container">
+                        <div class="display-demo">
+                            <div class="display-element visible-element">Visible</div>
+                            <div class="display-element hidden-display">Display: None</div>
+                            <div class="display-element hidden-visibility">Visibility: Hidden</div>
+                        </div>
+                        <code>display: none;<br>visibility: hidden;</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="position-section">
+            <h2 class="section-title">Position Properties</h2>
+            
+            <div class="position-demo-container">
+                <div class="position-reference">
+                    <h3>Positioning Context</h3>
+                    <div class="position-examples">
+                        <div class="position-element static">Static (Default)</div>
+                        <div class="position-element relative">Relative Position</div>
+                        <div class="position-element absolute">Absolute Position</div>
+                        <div class="position-element fixed">Fixed Position</div>
+                        <div class="position-element sticky">Sticky Position</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-examples">
+                <div class="property-demo">
+                    <h3>Static Position</h3>
+                    <p>Default position in normal document flow</p>
+                    <div class="demo-container">
+                        <div class="position-demo static-demo">
+                            <div class="pos-element">Static Element 1</div>
+                            <div class="pos-element">Static Element 2</div>
+                            <div class="pos-element">Static Element 3</div>
+                        </div>
+                        <code>position: static;</code>
+                    </div>
+                </div>
+
+                <div class="property-demo">
+                    <h3>Relative Position</h3>
+                    <p>Positioned relative to its normal position</p>
+                    <div class="demo-container">
+                        <div class="position-demo relative-demo">
+                            <div class="pos-element">Normal</div>
+                            <div class="pos-element relative-pos">Relative Position</div>
+                            <div class="pos-element">Normal</div>
+                        </div>
+                        <code>position: relative;<br>top: 20px;<br>left: 30px;</code>
+                    </div>
+                </div>
+
+                <div class="property-demo">
+                    <h3>Absolute Position</h3>
+                    <p>Positioned relative to nearest positioned ancestor</p>
+                    <div class="demo-container">
+                        <div class="position-demo absolute-demo">
+                            <div class="pos-element">Container</div>
+                            <div class="pos-element absolute-pos">Absolute Position</div>
+                            <div class="pos-element">Content</div>
+                        </div>
+                        <code>position: absolute;<br>top: 10px;<br>right: 10px;</code>
+                    </div>
+                </div>
+
+                <div class="property-demo">
+                    <h3>Fixed Position</h3>
+                    <p>Positioned relative to viewport</p>
+                    <div class="demo-container">
+                        <div class="position-demo fixed-demo">
+                            <div class="pos-element">Scroll down to see fixed element</div>
+                            <div class="pos-element fixed-pos">Fixed Position</div>
+                            <div class="pos-element">More content...</div>
+                        </div>
+                        <code>position: fixed;<br>bottom: 20px;<br>right: 20px;</code>
+                    </div>
+                </div>
+
+                <div class="property-demo">
+                    <h3>Sticky Position</h3>
+                    <p>Switches between relative and fixed based on scroll</p>
+                    <div class="demo-container">
+                        <div class="position-demo sticky-demo">
+                            <div class="pos-element">Scroll down</div>
+                            <div class="pos-element sticky-pos">Sticky Position</div>
+                            <div class="pos-element">More content...</div>
+                            <div class="pos-element">Keep scrolling...</div>
+                        </div>
+                        <code>position: sticky;<br>top: 0;</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="zindex-section">
+            <h2 class="section-title">Z-Index & Stacking Context</h2>
+            
+            <div class="property-examples">
+                <div class="property-demo">
+                    <h3>Z-Index Basics</h3>
+                    <p>Control stacking order of positioned elements</p>
+                    <div class="demo-container">
+                        <div class="zindex-demo">
+                            <div class="zindex-element low-z">Z-Index: 1</div>
+                            <div class="zindex-element medium-z">Z-Index: 5</div>
+                            <div class="zindex-element high-z">Z-Index: 10</div>
+                        </div>
+                        <code>z-index: 1;<br>z-index: 5;<br>z-index: 10;</code>
+                    </div>
+                </div>
+
+                <div class="property-demo">
+                    <h3>Stacking Context</h3>
+                    <p>How elements are stacked in 3D space</p>
+                    <div class="demo-container">
+                        <div class="stacking-demo">
+                            <div class="stacking-element background">Background</div>
+                            <div class="stacking-element negative-z">Negative Z-Index</div>
+                            <div class="stacking-element normal-flow">Normal Flow</div>
+                            <div class="stacking-element positioned">Positioned</div>
+                            <div class="stacking-element floating">Floating</div>
+                        </div>
+                        <code>/* Stacking order */<br>1. Background & borders<br>2. Negative z-index<br>3. Block elements<br>4. Floating elements<br>5. Inline elements<br>6. Z-index 0+<br>7. Positioned elements</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="real-world-section">
+            <h2 class="section-title">Real World Examples</h2>
+            
+            <div class="real-world-examples">
+                <div class="example-card">
+                    <h3>Navigation Menu</h3>
+                    <div class="nav-example">
+                        <div class="nav-logo">Logo</div>
+                        <nav class="nav-menu">
+                            <a href="#" class="nav-item">Home</a>
+                            <a href="#" class="nav-item">About</a>
+                            <a href="#" class="nav-item dropdown">
+                                Services ▼
+                                <div class="dropdown-menu">
+                                    <a href="#" class="dropdown-item">Web Design</a>
+                                    <a href="#" class="dropdown-item">Development</a>
+                                    <a href="#" class="dropdown-item">SEO</a>
+                                </div>
+                            </a>
+                            <a href="#" class="nav-item">Contact</a>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <h3>Modal Overlay</h3>
+                    <div class="modal-example">
+                        <button class="modal-trigger">Open Modal</button>
+                        <div class="modal-overlay">
+                            <div class="modal-content">
+                                <h4>Modal Title</h4>
+                                <p>This is a modal dialog using absolute positioning and z-index.</p>
+                                <button class="modal-close">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <h3>Sticky Header</h3>
+                    <div class="sticky-example">
+                        <header class="sticky-header">
+                            <div class="header-content">
+                                <span class="header-logo">Sticky Header</span>
+                                <nav class="header-nav">
+                                    <a href="#">Home</a>
+                                    <a href="#">About</a>
+                                    <a href="#">Services</a>
+                                    <a href="#">Contact</a>
+                                </nav>
+                            </div>
+                        </header>
+                        <main class="sticky-content">
+                            <div class="content-block">Scroll down to see sticky behavior</div>
+                            <div class="content-block">Content section 1</div>
+                            <div class="content-block">Content section 2</div>
+                            <div class="content-block">Content section 3</div>
+                            <div class="content-block">Content section 4</div>
+                        </main>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="properties-section">
+            <h2 class="section-title">Display & Position Properties Reference</h2>
+            
+            <div class="properties-grid">
+                <div class="property-category">
+                    <h3>📦 Display Values</h3>
+                    <ul>
+                        <li><code>display: block</code> - Full width, line break</li>
+                        <li><code>display: inline</code> - Inline flow, no line break</li>
+                        <li><code>display: inline-block</code> - Inline with block properties</li>
+                        <li><code>display: none</code> - Completely removed from layout</li>
+                        <li><code>display: flex</code> - Flexbox layout</li>
+                        <li><code>display: grid</code> - Grid layout</li>
+                        <li><code>display: table</code> - Table layout</li>
+                        <li><code>display: contents</code> - No box, children visible</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>📍 Position Values</h3>
+                    <ul>
+                        <li><code>position: static</code> - Default, in normal flow</li>
+                        <li><code>position: relative</code> - Relative to normal position</li>
+                        <li><code>position: absolute</code> - Relative to positioned ancestor</li>
+                        <li><code>position: fixed</code> - Relative to viewport</li>
+                        <li><code>position: sticky</code> - Relative until scroll threshold</li>
+                        <li><code>position: inherit</code> - Inherit from parent</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>🎯 Offset Properties</h3>
+                    <ul>
+                        <li><code>top</code> - Distance from top edge</li>
+                        <li><code>right</code> - Distance from right edge</li>
+                        <li><code>bottom</code> - Distance from bottom edge</li>
+                        <li><code>left</code> - Distance from left edge</li>
+                        <li><code>inset</code> - Shorthand for top/right/bottom/left</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>📚 Stacking Properties</h3>
+                    <ul>
+                        <li><code>z-index</code> - Stacking order</li>
+                        <li><code>float</code> - Float element left/right</li>
+                        <li><code>clear</code> - Clear floating elements</li>
+                        <li><code>visibility</code> - Show/hide without affecting layout</li>
+                        <li><code>opacity</code> - Element transparency</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>⚡ Common Patterns</h3>
+                    <ul>
+                        <li><code>position: absolute; top: 0; left: 0;</code> - Top-left corner</li>
+                        <li><code>position: fixed; bottom: 0; right: 0;</code> - Bottom-right fixed</li>
+                        <li><code>position: sticky; top: 0;</code> - Sticky header</li>
+                        <li><code>display: inline-block; vertical-align: middle;</code> - Inline alignment</li>
+                        <li><code>position: relative; z-index: 1;</code> - Create stacking context</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <nav class="lesson-navigation">
+            <a href="../box-model/box-model.html" class="nav-btn-prev">← Box Model</a>
+            <a href="../flexbox/flexbox.html" class="nav-btn-next">Flexbox →</a>
+        </nav>
+    </main>
+</body>
+</html>

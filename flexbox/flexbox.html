@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox - CSS Master Guide</title>
+    <link rel="stylesheet" href="flexbox.css">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">🎨 CSS Master Guide</h1>
+            <div class="nav-scroll-container">
+                <div class="nav-buttons">
+                    <a href="../index.html" class="nav-btn">🏠 Home</a>
+                    <a href="../introduction/introduction.html" class="nav-btn">📝 Introduction</a>
+                    <a href="../selectors/selectors.html" class="nav-btn">🎯 Selectors</a>
+                    <a href="../box-model/box-model.html" class="nav-btn">📦 Box Model</a>
+                    <a href="../display-position/display-position.html" class="nav-btn">📍 Display & Position</a>
+                    <a href="../flexbox/flexbox.html" class="nav-btn active">🎪 Flexbox</a>
+                    <a href="../grid/grid.html" class="nav-btn">🔲 Grid</a>
+                    <a href="../responsive/responsive.html" class="nav-btn">📱 Responsive</a>
+                    <a href="../animations/animations.html" class="nav-btn">✨ Animations</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <header class="lesson-header">
+            <h1>CSS Flexbox</h1>
+            <p>Master the modern one-dimensional layout system for flexible and responsive designs</p>
+        </header>
+
+        <section class="intro-section">
+            <h2 class="section-title">What is Flexbox?</h2>
+            <div class="intro-content">
+                <div class="intro-text">
+                    <p>Flexbox is a CSS layout module that makes it easier to design flexible and responsive layout structures without using float or positioning.</p>
+                    <div class="key-features">
+                        <div class="feature">
+                            <span class="feature-icon">📱</span>
+                            <span>Responsive</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">⚡</span>
+                            <span>Efficient</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🎯</span>
+                            <span>Precise Alignment</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🔄</span>
+                            <span>Flexible</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro-visual">
+                    <div class="flex-concept">
+                        <div class="main-axis">
+                            <span>Main Axis</span>
+                            <div class="axis-arrow">→</div>
+                        </div>
+                        <div class="cross-axis">
+                            <span>Cross Axis</span>
+                            <div class="axis-arrow">↓</div>
+                        </div>
+                        <div class="flex-container-concept">
+                            <div class="flex-item-concept">Item 1</div>
+                            <div class="flex-item-concept">Item 2</div>
+                            <div class="flex-item-concept">Item 3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-section">
+            <h2 class="section-title">Container Properties</h2>
+            
+            <div class="property-examples">
+                <div class="property-demo">
+                    <h3>justify-content</h3>
+                    <p>Aligns items along the main axis</p>
+                    <div class="demo-container">
+                        <div class="flex-demo justify-start">
+                            <div class="flex-demo-item">1</div>
+                            <div class="flex-demo-item">2</div>
+                            <div class="flex-demo-item">3</div>
+                        </div>
+                        <code>justify-content: flex-start</code>
+                    </div>
+                    <div class="demo-container">
+                        <div class="flex-demo justify-center">
+                            <div class="flex-demo-item">1</div>
+                            <div class="flex-demo-item">2</div>
+                            <div class="flex-demo-item">3</div>
+                        </div>
+                        <code>justify-content: center</code>
+                    </div>
+                    <div class="demo-container">
+                        <div class="flex-demo justify-end">
+                            <div class="flex-demo-item">1</div>
+                            <div class="flex-demo-item">2</div>
+                            <div class="flex-demo-item">3</div>
+                        </div>
+                        <code>justify-content: flex-end</code>
+                    </div>
+                    <div class="demo-container">
+                        <div class="flex-demo justify-between">
+                            <div class="flex-demo-item">1</div>
+                            <div class="flex-demo-item">2</div>
+                            <div class="flex-demo-item">3</div>
+                        </div>
+                        <code>justify-content: space-between</code>
+                    </div>
+                    <div class="demo-container">
+                        <div class="flex-demo justify-around">
+                            <div class="flex-demo-item">1</div>
+                            <div class="flex-demo-item">2</div>
+                            <div class="flex-demo-item">3</div>
+                        </div>
+                        <code>justify-content: space-around</code>
+                    </div>
+                </div>
+
+                <div class="property-demo">
+                    <h3>align-items</h3>
+                    <p>Aligns items along the cross axis</p>
+                    <div class="demo-container">
+                        <div class="flex-demo align-stretch">
+                            <div class="flex-demo-item tall">Stretch</div>
+                            <div class="flex-demo-item tall">Stretch</div>
+                        </div>
+                        <code>align-items: stretch</code>
+                    </div>
+                    <div class="demo-container">
+                        <div class="flex-demo align-center">
+                            <div class="flex-demo-item">Center</div>
+                            <div class="flex-demo-item">Center</div>
+                        </div>
+                        <code>align-items: center</code>
+                    </div>
+                    <div class="demo-container">
+                        <div class="flex-demo align-start">
+                            <div class="flex-demo-item">Start</div>
+                            <div class="flex-demo-item">Start</div>
+                        </div>
+                        <code>align-items: flex-start</code>
+                    </div>
+                    <div class="demo-container">
+                        <div class="flex-demo align-end">
+                            <div class="flex-demo-item">End</div>
+                            <div class="flex-demo-item">End</div>
+                        </div>
+                        <code>align-items: flex-end</code>
+                    </div>
+                </div>
+
+                <div class="property-demo">
+                    <h3>flex-direction</h3>
+                    <p>Defines the direction of the main axis</p>
+                    <div class="demo-container">
+                        <div class="flex-demo direction-row">
+                            <div class="flex-demo-item">Row</div>
+                            <div class="flex-demo-item">Row</div>
+                        </div>
+                        <code>flex-direction: row</code>
+                    </div>
+                    <div class="demo-container">
+                        <div class="flex-demo direction-column">
+                            <div class="flex-demo-item">Column</div>
+                            <div class="flex-demo-item">Column</div>
+                        </div>
+                        <code>flex-direction: column</code>
+                    </div>
+                    <div class="demo-container">
+                        <div class="flex-demo direction-row-reverse">
+                            <div class="flex-demo-item">Reverse</div>
+                            <div class="flex-demo-item">Reverse</div>
+                        </div>
+                        <code>flex-direction: row-reverse</code>
+                    </div>
+                    <div class="demo-container">
+                        <div class="flex-demo direction-column-reverse">
+                            <div class="flex-demo-item">Reverse</div>
+                            <div class="flex-demo-item">Reverse</div>
+                        </div>
+                        <code>flex-direction: column-reverse</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="items-section">
+            <h2 class="section-title">Item Properties</h2>
+            
+            <div class="property-examples">
+                <div class="property-demo">
+                    <h3>flex-grow</h3>
+                    <p>Ability for an item to grow relative to others</p>
+                    <div class="demo-container">
+                        <div class="flex-demo">
+                            <div class="flex-demo-item grow-0">grow 0</div>
+                            <div class="flex-demo-item grow-1">grow 1</div>
+                            <div class="flex-demo-item grow-2">grow 2</div>
+                        </div>
+                        <code>flex-grow: 0 | 1 | 2</code>
+                    </div>
+                </div>
+
+                <div class="property-demo">
+                    <h3>flex-shrink</h3>
+                    <p>Ability for an item to shrink relative to others</p>
+                    <div class="demo-container">
+                        <div class="flex-demo shrink-demo">
+                            <div class="flex-demo-item shrink-0">shrink 0</div>
+                            <div class="flex-demo-item shrink-1">shrink 1</div>
+                            <div class="flex-demo-item shrink-2">shrink 2</div>
+                        </div>
+                        <code>flex-shrink: 0 | 1 | 2</code>
+                    </div>
+                </div>
+
+                <div class="property-demo">
+                    <h3>order</h3>
+                    <p>Changes the visual order of items</p>
+                    <div class="demo-container">
+                        <div class="flex-demo">
+                            <div class="flex-demo-item order-3">order 3</div>
+                            <div class="flex-demo-item order-1">order 1</div>
+                            <div class="flex-demo-item order-2">order 2</div>
+                        </div>
+                        <code>order: 3 | 1 | 2</code>
+                    </div>
+                </div>
+
+                <div class="property-demo">
+                    <h3>align-self</h3>
+                    <p>Overrides align-items for individual items</p>
+                    <div class="demo-container">
+                        <div class="flex-demo align-stretch">
+                            <div class="flex-demo-item tall">Stretch</div>
+                            <div class="flex-demo-item align-self-start">Start</div>
+                            <div class="flex-demo-item align-self-center">Center</div>
+                            <div class="flex-demo-item align-self-end">End</div>
+                        </div>
+                        <code>align-self: flex-start | center | flex-end</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="real-world-section">
+            <h2 class="section-title">Real World Examples</h2>
+            
+            <div class="real-world-examples">
+                <div class="example-card">
+                    <h3>Navigation Menu</h3>
+                    <div class="nav-example">
+                        <div class="nav-brand">Logo</div>
+                        <nav class="nav-links">
+                            <a href="#" class="nav-link">Home</a>
+                            <a href="#" class="nav-link">About</a>
+                            <a href="#" class="nav-link">Services</a>
+                            <a href="#" class="nav-link">Contact</a>
+                        </nav>
+                        <div class="nav-actions">
+                            <button class="nav-btn">Login</button>
+                            <button class="nav-btn primary">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <h3>Card Layout</h3>
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Feature One</h4>
+                            </div>
+                            <div class="card-body">
+                                <p>Flexbox makes card layouts responsive and easy to maintain.</p>
+                            </div>
+                            <div class="card-footer">
+                                <button class="card-btn">Learn More</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Feature Two</h4>
+                            </div>
+                            <div class="card-body">
+                                <p>Perfect for modern web design patterns and components.</p>
+                            </div>
+                            <div class="card-footer">
+                                <button class="card-btn">Get Started</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Feature Three</h4>
+                            </div>
+                            <div class="card-body">
+                                <p>Responsive and flexible by default with Flexbox.</p>
+                            </div>
+                            <div class="card-footer">
+                                <button class="card-btn">Explore</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <h3>Pricing Grid</h3>
+                    <div class="pricing-grid">
+                        <div class="pricing-plan">
+                            <div class="plan-header">
+                                <h4>Basic</h4>
+                                <div class="price">$9.99</div>
+                            </div>
+                            <ul class="plan-features">
+                                <li>✓ 10 Projects</li>
+                                <li>✓ 5GB Storage</li>
+                                <li>✓ Basic Support</li>
+                            </ul>
+                            <button class="plan-btn">Choose Plan</button>
+                        </div>
+                        <div class="pricing-plan featured">
+                            <div class="plan-header">
+                                <h4>Pro</h4>
+                                <div class="price">$19.99</div>
+                            </div>
+                            <ul class="plan-features">
+                                <li>✓ 50 Projects</li>
+                                <li>✓ 50GB Storage</li>
+                                <li>✓ Priority Support</li>
+                            </ul>
+                            <button class="plan-btn primary">Choose Plan</button>
+                        </div>
+                        <div class="pricing-plan">
+                            <div class="plan-header">
+                                <h4>Enterprise</h4>
+                                <div class="price">$49.99</div>
+                            </div>
+                            <ul class="plan-features">
+                                <li>✓ Unlimited Projects</li>
+                                <li>✓ 500GB Storage</li>
+                                <li>✓ 24/7 Support</li>
+                            </ul>
+                            <button class="plan-btn">Choose Plan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="properties-section">
+            <h2 class="section-title">Flexbox Properties Reference</h2>
+            
+            <div class="properties-grid">
+                <div class="property-category">
+                    <h3>🎪 Container Properties</h3>
+                    <ul>
+                        <li><code>display: flex</code> - Enable flexbox</li>
+                        <li><code>flex-direction</code> - Main axis direction</li>
+                        <li><code>justify-content</code> - Main axis alignment</li>
+                        <li><code>align-items</code> - Cross axis alignment</li>
+                        <li><code>flex-wrap</code> - Single/multi-line</li>
+                        <li><code>align-content</code> - Multi-line alignment</li>
+                        <li><code>gap</code> - Space between items</li>
+                        <li><code>row-gap</code> - Space between rows</li>
+                        <li><code>column-gap</code> - Space between columns</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>🎯 Item Properties</h3>
+                    <ul>
+                        <li><code>order</code> - Visual order</li>
+                        <li><code>flex-grow</code> - Ability to grow</li>
+                        <li><code>flex-shrink</code> - Ability to shrink</li>
+                        <li><code>flex-basis</code> - Initial size</li>
+                        <li><code>flex</code> - Shorthand (grow shrink basis)</li>
+                        <li><code>align-self</code> - Individual alignment</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>📐 Direction Values</h3>
+                    <ul>
+                        <li><code>row</code> - Left to right (default)</li>
+                        <li><code>row-reverse</code> - Right to left</li>
+                        <li><code>column</code> - Top to bottom</li>
+                        <li><code>column-reverse</code> - Bottom to top</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>🎨 Alignment Values</h3>
+                    <ul>
+                        <li><code>flex-start</code> - Start of container</li>
+                        <li><code>flex-end</code> - End of container</li>
+                        <li><code>center</code> - Center of container</li>
+                        <li><code>space-between</code> - Equal space between</li>
+                        <li><code>space-around</code> - Equal space around</li>
+                        <li><code>space-evenly</code> - Equal space throughout</li>
+                        <li><code>stretch</code> - Fill container</li>
+                        <li><code>baseline</code> - Align by text baseline</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>🔄 Wrap Values</h3>
+                    <ul>
+                        <li><code>nowrap</code> - Single line (default)</li>
+                        <li><code>wrap</code> - Multiple lines</li>
+                        <li><code>wrap-reverse</code> - Multiple lines reversed</li>
+                    </ul>
+                </div>
+
+                <div class="property-category">
+                    <h3>⚡ Shorthand</h3>
+                    <ul>
+                        <li><code>flex: 1</code> - flex: 1 1 0</li>
+                        <li><code>flex: auto</code> - flex: 1 1 auto</li>
+                        <li><code>flex: none</code> - flex: 0 0 auto</li>
+                        <li><code>flex: initial</code> - flex: 0 1 auto</li>
+                        <li><code>flex: 2 1 200px</code> - grow shrink basis</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <nav class="lesson-navigation">
+            <a href="../display-position/display-position.html" class="nav-btn-prev">← Display & Position</a>
+            <a href="../grid/grid.html" class="nav-btn-next">Grid →</a>
+        </nav>
+    </main>
+</body>
+</html>

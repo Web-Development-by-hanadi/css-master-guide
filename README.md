@@ -22,7 +22,7 @@ A comprehensive collection of CSS tutorials and examples to help you master web 
 
 ## Live Demo
 
-Visit the live site: 
+Visit the live site: https://web-development-by-hanadi.github.io/css-master-guide/
 
 ## Technologies Used
 
